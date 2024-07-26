@@ -44,7 +44,28 @@ public class Main {
 
 
                 } else if (team_option == 1){
-                    continue;
+                    System.out.println("Select the number of team\n---------");
+                    for (Team existedTeam: teams){
+                        System.out.println(existedTeam);
+                    }
+                    System.out.println("---------");
+
+                    int team_id = sc.nextInt();
+
+                    Team team = teams.get(team_id - 1);
+
+                    System.out.println("Select student number to add to this team\n---------");
+                    for (Student student: students){
+                        System.out.println(student);
+                    }
+                    System.out.println("---------");
+
+                    System.out.println("Enter the id:");
+                    int student_id = sc.nextInt();
+                    Student student = students.get(student_id - 1);
+
+                    team.addStudent(student);
+
                 }
             } else if (space_choice == 1) {
                 continue;
