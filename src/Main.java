@@ -68,7 +68,27 @@ public class Main {
 
                 }
             } else if (space_choice == 1) {
-                continue;
+                System.out.println("Press 0 to create new student");
+                int student_option = sc.nextInt();
+
+                if(student_option == 0){
+                    System.out.println("Enter the name of student :");
+                    sc.nextLine();
+                    String studentName = sc.nextLine();
+
+                    System.out.println("Enter the age of student");
+                    int studentAge = sc.nextInt();
+
+                    Student student = new Student(studentName, studentAge);
+                    students.add(student);
+
+                    System.out.println("Student craeted succcessfully,this is a list of all students\n---------");
+                    for (Student existedStudent: students){
+                        System.out.println(existedStudent);
+                    }
+                    System.out.println("---------");
+
+                }
             }
         }
     }

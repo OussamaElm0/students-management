@@ -5,13 +5,14 @@ public class Team {
     String teamName;
     double note;
     String projectTitle;
-    int id = 0;
+    int id;
+    static int idCount = 1;
 
     Team(String teamName, double note, String projectTitle){
         this.teamName = teamName;
         this.note = note;
         this.projectTitle = projectTitle;
-        this.id++;
+        this.id = Team.idCount++ ;
     }
 
     void addStudent(Student student){
